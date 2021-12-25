@@ -10,7 +10,7 @@ console.log(da);
 
 function Allexpense() {
     const [data1, gotdata] = useState(da);
-    const [currentdate, filterdate] = useState(2020);
+    const [currentdate, filterdate] = useState(2022);
 
     const funtogetdatafromform = (dataobject) => {
 
@@ -19,6 +19,7 @@ function Allexpense() {
     }
 
     function getfiltereddate(choosedyear) {
+        console.log(data1);
         filterdate(parseInt(choosedyear));
 
     }
@@ -28,10 +29,10 @@ function Allexpense() {
             <Newexpense getdatafromform={funtogetdatafromform}></Newexpense>
 
             <div className="expenses">
-            <Charcomponent dforcharts={data1}></Charcomponent>
 
                 <Expensefilter callchoosedyearfun={getfiltereddate}></Expensefilter>
 
+                <Charcomponent dforcharts={data1} currrd = {currentdate}></Charcomponent>
 
                 <Getallexpenses dat={data1} year={currentdate}></Getallexpenses>
 

@@ -13,10 +13,10 @@ const buttonclick = ()=>{
 return (
 
 <div className="expense-item">
-    <Datecomponent dat = {'dd'}></Datecomponent>
+    <Datecomponent dat = {data1.date.getFullYear()}></Datecomponent>
 <div className="expense-item__description">
 
-<h2>{title}</h2>
+<h2>{data1.title}</h2>
 <div className="expense-item__price">{data1.amount}</div>
 </div>
 <button onClick = {buttonclick}>Change title</button>
